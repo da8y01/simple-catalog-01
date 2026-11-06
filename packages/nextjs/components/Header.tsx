@@ -3,7 +3,8 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { hardhat } from "viem/chains";
 import { Bars3Icon, BugAntIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
@@ -15,30 +16,31 @@ type HeaderMenuLink = {
   icon?: React.ReactNode;
 };
 
-export const menuLinks: HeaderMenuLink[] = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Catalog",
-    href: "/catalog",
-    icon: <ShoppingBagIcon className="h-4 w-4" />,
-  },
-  {
-    label: "Debug Contracts",
-    href: "/debug",
-    icon: <BugAntIcon className="h-4 w-4" />,
-  },
-];
-
 export const HeaderMenuLinks = () => {
   const pathname = usePathname();
+  const t = useTranslations("Header");
+
+  const menuLinks: HeaderMenuLink[] = [
+    {
+      label: t("home"),
+      href: "/",
+    },
+    {
+      label: t("catalog"),
+      href: "/catalog",
+      icon: <ShoppingBagIcon className="h-4 w-4" />,
+    },
+    {
+      label: t("debugContracts"),
+      href: "/debug",
+      icon: <BugAntIcon className="h-4 w-4" />,
+    },
+  ];
 
   return (
     <>
       {menuLinks.map(({ label, href, icon }) => {
-        const isActive = pathname === href;
+        const isActive = pathname === href || pathname.endsWith(href);
         return (
           <li key={href} className="h-full">
             <Link
@@ -64,11 +66,18 @@ export const HeaderMenuLinks = () => {
 export const Header = () => {
   const { targetNetwork } = useTargetNetwork();
   const isLocalNetwork = targetNetwork.id === hardhat.id;
+  const locale = useLocale();
+  const router = useRouter();
 
   const burgerMenuRef = useRef<HTMLDetailsElement>(null);
   useOutsideClick(burgerMenuRef, () => {
     burgerMenuRef?.current?.removeAttribute("open");
   });
+
+  const setLocale = (nextLocale: string) => {
+    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000`;
+    router.refresh();
+  };
 
   return (
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-16 shrink-0 justify-between z-20 border-b-2 border-base-300 p-0 sm:px-2">
@@ -99,7 +108,25 @@ export const Header = () => {
           <HeaderMenuLinks />
         </ul>
       </div>
-      <div className="navbar-end grow mr-4">
+      <div className="navbar-end grow mr-4 gap-2">
+        <div className="flex items-center gap-1">
+          <button
+            type="button"
+            className={`btn btn-ghost btn-xs ${locale === "en" ? "btn-active" : ""}`}
+            onClick={() => setLocale("en")}
+            aria-label="Switch to English"
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className={`btn btn-ghost btn-xs ${locale === "es" ? "btn-active" : ""}`}
+            onClick={() => setLocale("es")}
+            aria-label="Cambiar a Español"
+          >
+            ES
+          </button>
+        </div>
         <RainbowKitCustomConnectButton />
         {isLocalNetwork && <FaucetButton />}
       </div>

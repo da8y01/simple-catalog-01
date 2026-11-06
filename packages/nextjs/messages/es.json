@@ -1,0 +1,17 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "catalog": "Catálogo",
+    "debugContracts": "Depurar Contratos"
+  },
+  "Catalog": {
+    "titleOur": "Nuestro",
+    "titleCatalog": "Catálogo",
+    "subtitle": "Explora nuestra colección de artículos únicos",
+    "noItemsTitle": "Aún no hay productos",
+    "noItemsSubtitle": "¡Vuelve pronto para ver nuevos productos!",
+    "viewItem": "Ver Producto",
+    "inStock": "En Stock",
+    "outOfStock": "Agotado"
+  }
+}

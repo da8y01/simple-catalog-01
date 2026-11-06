@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Article } from "~~/app/catalog/data/articles";
 
 type ArticleCardProps = {
@@ -8,6 +9,8 @@ type ArticleCardProps = {
 };
 
 export const ArticleCard = ({ article }: ArticleCardProps) => {
+  const t = useTranslations("Catalog");
+
   return (
     <article className="card bg-base-100 shadow-md border border-base-300 h-full flex flex-col">
       <figure className="bg-base-200 h-48 flex items-center justify-center">
@@ -26,10 +29,10 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
         <p className="text-sm text-base-content/70 flex-grow">{article.description}</p>
         <div className="card-actions justify-between items-center mt-4">
           <span className={`badge badge-sm ${article.inStock !== false ? "badge-success" : "badge-ghost"}`}>
-            {article.inStock !== false ? "In Stock" : "Out of Stock"}
+            {article.inStock !== false ? t("inStock") : t("outOfStock")}
           </span>
           <Link href={`/catalog/${article.id}`} className="btn btn-sm btn-outline">
-            View Item
+            {t("viewItem")}
           </Link>
         </div>
       </div>

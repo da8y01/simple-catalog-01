@@ -347,6 +347,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eloqnt/config@npm:^0.1.0, @eloqnt/config@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@eloqnt/config@npm:0.1.1"
+  checksum: 10/4d664685d78a114f6002a17acae5295f229140a4921951a89d07d89b7675dfcc4688c7fe13a4b71b0a089390857e0eba6b48a38d818c54629010f99f7a6e6c06
+  languageName: node
+  linkType: hard
+
+"@eloqnt/format-json@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@eloqnt/format-json@npm:0.1.0"
+  dependencies:
+    "@eloqnt/config": "npm:^0.1.0"
+  checksum: 10/60d01fb9e4f59107f711a6efefb7a457be05100061c6c00ee7ec1f7e856424969c186b0b30761bd7db91960e4438f54c48fbf6eba86bb9826171f98325e7a03c
+  languageName: node
+  linkType: hard
+
+"@eloqnt/format-po@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@eloqnt/format-po@npm:0.1.1"
+  dependencies:
+    "@eloqnt/config": "npm:^0.1.1"
+    po-parser: "npm:^2.2.0"
+  checksum: 10/c8d86e6b6952a1433c423cae49305d6dc293577dc9f1b5a6c651519619f7b11f8505053307e3f77d6e5e7f72a630a4c0bf5c175e131b3715d6d37a2a53ed6dab
+  languageName: node
+  linkType: hard
+
 "@emnapi/core@npm:1.10.0":
   version: 1.10.0
   resolution: "@emnapi/core@npm:1.10.0"
@@ -1216,6 +1242,54 @@ __metadata:
   version: 2.1.1
   resolution: "@fastify/busboy@npm:2.1.1"
   checksum: 10/2bb8a7eca8289ed14c9eb15239bc1019797454624e769b39a0b90ed204d032403adc0f8ed0d2aef8a18c772205fa7808cf5a1b91f21c7bfc7b6032150b1062c5
+  languageName: node
+  linkType: hard
+
+"@formatjs/fast-memoize@npm:3.1.7, @formatjs/fast-memoize@npm:^3.1.0":
+  version: 3.1.7
+  resolution: "@formatjs/fast-memoize@npm:3.1.7"
+  checksum: 10/2d7ead48684539764ecb8a52178719169186595e830d9d6941eff12bec1ae31e20642a9cfd197007c48a8cc7e965bf61445ffcccc0fd77281341271d00e7b8fb
+  languageName: node
+  linkType: hard
+
+"@formatjs/icu-messageformat-parser@npm:3.5.18":
+  version: 3.5.18
+  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.18"
+  dependencies:
+    "@formatjs/icu-skeleton-parser": "npm:2.1.11"
+  checksum: 10/fc2215a16571fcff3eb9f446878ef7649d40064a79648352ab79f68f4b48ce7b196125495eec82caa02edec78a9a094d8fd6fd5db0abeb353b95afb62672c2a2
+  languageName: node
+  linkType: hard
+
+"@formatjs/icu-messageformat-parser@npm:^3.4.0":
+  version: 3.5.22
+  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.22"
+  dependencies:
+    "@formatjs/icu-skeleton-parser": "npm:2.1.12"
+  checksum: 10/1733544ae08ae1904705b65e22d7146998cfcdb2f6634e99fe4f3b64a8eec7ca0186616f6c1c989d08d67572891c4f13f4e08a3fc246776a71339297e6c3d87f
+  languageName: node
+  linkType: hard
+
+"@formatjs/icu-skeleton-parser@npm:2.1.11":
+  version: 2.1.11
+  resolution: "@formatjs/icu-skeleton-parser@npm:2.1.11"
+  checksum: 10/492f42bd4ad72b2cdb4fd75a07e3874aa78e88f346027058f74c58e3828378092784176c9f7c77f4b5baf58ffaa1a4e8f5efcb53143552def2990510d0ac3c16
+  languageName: node
+  linkType: hard
+
+"@formatjs/icu-skeleton-parser@npm:2.1.12":
+  version: 2.1.12
+  resolution: "@formatjs/icu-skeleton-parser@npm:2.1.12"
+  checksum: 10/c45951202390de86e239b2ec37589a5c1ae90eb6777f9e7e4e3ee85466a2e1004128cdfe52ff4643fbc1d4117d56fa4c60450d93a79934a6d64a387b5fd100b0
+  languageName: node
+  linkType: hard
+
+"@formatjs/intl-localematcher@npm:^0.8.1":
+  version: 0.8.14
+  resolution: "@formatjs/intl-localematcher@npm:0.8.14"
+  dependencies:
+    "@formatjs/fast-memoize": "npm:3.1.7"
+  checksum: 10/7187408cd7013c4979cd6f20bc59157545fead472462f935f6728b8e4301e2f7e35c1541f0b944a12f2edb9bfc4483ca318ed2475cda5f5a1981360c9a2a2def
   languageName: node
   linkType: hard
 
@@ -3577,7 +3651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/watcher@npm:^2.5.6":
+"@parcel/watcher@npm:^2.4.1, @parcel/watcher@npm:^2.5.6":
   version: 2.6.0
   resolution: "@parcel/watcher@npm:2.6.0"
   dependencies:
@@ -4203,6 +4277,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@schummar/icu-type-parser@npm:1.21.5":
+  version: 1.21.5
+  resolution: "@schummar/icu-type-parser@npm:1.21.5"
+  checksum: 10/4e83edf93bf49c414d9e2f5bb0457dfd012586d4e24f3850a4cc5b6a18c5329868e8a4b1cb0d4ad8490f175fd21d00229213eb9b2e799809015d85788e567139
+  languageName: node
+  linkType: hard
+
 "@scure/base@npm:^1.1.3, @scure/base@npm:~1.2.2, @scure/base@npm:~1.2.4, @scure/base@npm:~1.2.5":
   version: 1.2.6
   resolution: "@scure/base@npm:1.2.6"
@@ -4360,6 +4441,7 @@ __metadata:
     eslint-plugin-prettier: "npm:~5.5.5"
     kubo-rpc-client: "npm:~6.1.0"
     next: "npm:~16.2.4"
+    next-intl: "npm:^4.14.9"
     next-nprogress-bar: "npm:~2.4.7"
     next-themes: "npm:~0.4.6"
     postcss: "npm:~8.5.10"
@@ -5224,12 +5306,164 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-darwin-arm64@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-darwin-arm64@npm:1.16.20"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-darwin-x64@npm:1.16.20"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.16.20"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.16.20"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-arm64-musl@npm:1.16.20"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-ppc64-gnu@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-ppc64-gnu@npm:1.16.20"
+  conditions: os=linux & cpu=ppc64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-s390x-gnu@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-s390x-gnu@npm:1.16.20"
+  conditions: os=linux & cpu=s390x & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-x64-gnu@npm:1.16.20"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-linux-x64-musl@npm:1.16.20"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.16.20"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.16.20"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-x64-msvc@npm:1.16.20":
+  version: 1.16.20
+  resolution: "@swc/core-win32-x64-msvc@npm:1.16.20"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:~1.16.0":
+  version: 1.16.20
+  resolution: "@swc/core@npm:1.16.20"
+  dependencies:
+    "@swc/core-darwin-arm64": "npm:1.16.20"
+    "@swc/core-darwin-x64": "npm:1.16.20"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.16.20"
+    "@swc/core-linux-arm64-gnu": "npm:1.16.20"
+    "@swc/core-linux-arm64-musl": "npm:1.16.20"
+    "@swc/core-linux-ppc64-gnu": "npm:1.16.20"
+    "@swc/core-linux-s390x-gnu": "npm:1.16.20"
+    "@swc/core-linux-x64-gnu": "npm:1.16.20"
+    "@swc/core-linux-x64-musl": "npm:1.16.20"
+    "@swc/core-win32-arm64-msvc": "npm:1.16.20"
+    "@swc/core-win32-ia32-msvc": "npm:1.16.20"
+    "@swc/core-win32-x64-msvc": "npm:1.16.20"
+    "@swc/counter": "npm:^0.1.3"
+    "@swc/types": "npm:^0.1.28"
+  peerDependencies:
+    "@swc/helpers": ">=0.5.17"
+  dependenciesMeta:
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-ppc64-gnu":
+      optional: true
+    "@swc/core-linux-s390x-gnu":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    "@swc/helpers":
+      optional: true
+  checksum: 10/0468ff010246a684d25099f4853b5bb6a631f03a01900b77177cb4a22cf39b914358e1189b98bc5fe7ae354c65e3e784767499fc68a44bffa5c4ad77b2084b00
+  languageName: node
+  linkType: hard
+
+"@swc/counter@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@swc/counter@npm:0.1.3"
+  checksum: 10/df8f9cfba9904d3d60f511664c70d23bb323b3a0803ec9890f60133954173047ba9bdeabce28cd70ba89ccd3fd6c71c7b0bd58be85f611e1ffbe5d5c18616598
+  languageName: node
+  linkType: hard
+
 "@swc/helpers@npm:0.5.15":
   version: 0.5.15
   resolution: "@swc/helpers@npm:0.5.15"
   dependencies:
     tslib: "npm:^2.8.0"
   checksum: 10/e3f32c6deeecfb0fa3f22edff03a7b358e7ce16d27b0f1c8b5cdc3042c5c4ce4da6eac0b781ab7cc4f54696ece657467d56734fb26883439fb00017385364c4c
+  languageName: node
+  linkType: hard
+
+"@swc/types@npm:^0.1.28":
+  version: 0.1.28
+  resolution: "@swc/types@npm:0.1.28"
+  dependencies:
+    "@swc/counter": "npm:^0.1.3"
+  checksum: 10/9cd2b13a640c36d28235a30567dc38330e01dc54ba0ca6ff4000fc56f0be27252b91c3df4989a9ef019b9df9eb722e73fb273913675f8b891428981fb9cc9a0f
   languageName: node
   linkType: hard
 
@@ -11159,6 +11393,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"icu-minify@npm:^4.14.9":
+  version: 4.14.9
+  resolution: "icu-minify@npm:4.14.9"
+  dependencies:
+    "@formatjs/icu-messageformat-parser": "npm:^3.4.0"
+  checksum: 10/d37ef987b8d84d8277654d6cc8d41925992de94612cb3d5f420b38922002c2d672ccfa887c555a42954905587dd7ad522e64bc39bf8e5a1daef2667e6b05c376
+  languageName: node
+  linkType: hard
+
 "idb-keyval@npm:6.2.1":
   version: 6.2.1
   resolution: "idb-keyval@npm:6.2.1"
@@ -11327,6 +11570,16 @@ __metadata:
     hasown: "npm:^2.0.2"
     side-channel: "npm:^1.1.0"
   checksum: 10/1d5219273a3dab61b165eddf358815eefc463207db33c20fcfca54717da02e3f492003757721f972fd0bf21e4b426cab389c5427b99ceea4b8b670dc88ee6d4a
+  languageName: node
+  linkType: hard
+
+"intl-messageformat@npm:^11.1.0":
+  version: 11.2.15
+  resolution: "intl-messageformat@npm:11.2.15"
+  dependencies:
+    "@formatjs/fast-memoize": "npm:3.1.7"
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
+  checksum: 10/71d1448964e685c821b3680a89668aae3fe92f6b7774842ea5eb08830417846d4fcbcaf691930e4da1ceb2cc414eeab468c7e3dd4eb530a38ffed91530468ac5
   languageName: node
   linkType: hard
 
@@ -13518,6 +13771,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-intl-swc-plugin-extractor@npm:4.14.9":
+  version: 4.14.9
+  resolution: "next-intl-swc-plugin-extractor@npm:4.14.9"
+  checksum: 10/fb87efc1d02ced39ffc2f9708b5a52203c5d056d3204beb3bd85a22aad7cc1a06dfe455936862efac814a39f893acc288e3c857f65b7ad011c1731e826584ad5
+  languageName: node
+  linkType: hard
+
+"next-intl@npm:^4.14.9":
+  version: 4.14.9
+  resolution: "next-intl@npm:4.14.9"
+  dependencies:
+    "@eloqnt/config": "npm:^0.1.1"
+    "@eloqnt/format-json": "npm:^0.1.0"
+    "@eloqnt/format-po": "npm:^0.1.1"
+    "@formatjs/intl-localematcher": "npm:^0.8.1"
+    "@parcel/watcher": "npm:^2.4.1"
+    "@swc/core": "npm:~1.16.0"
+    icu-minify: "npm:^4.14.9"
+    negotiator: "npm:^1.0.0"
+    next-intl-swc-plugin-extractor: "npm:4.14.9"
+    use-intl: "npm:^4.14.9"
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    next: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10/e7bdcef92e11e81b1a0aa3ef9fa5e0db3f3ead2cfe45c1e6b6923ec6d4622dbfb9fad3714a5c7a8e6998809e1943479f2ab4c927beb188f07c5c5b33d4d1dce3
+  languageName: node
+  linkType: hard
+
 "next-nprogress-bar@npm:~2.4.7":
   version: 2.4.7
   resolution: "next-nprogress-bar@npm:2.4.7"
@@ -14820,6 +15105,13 @@ __metadata:
   version: 5.0.0
   resolution: "pngjs@npm:5.0.0"
   checksum: 10/345781644740779752505af2fea3e9043f6c7cc349b18e1fb8842796360d1624791f0c24d33c0f27b05658373f90ffaa177a849e932e5fea1f540cef3975f3c9
+  languageName: node
+  linkType: hard
+
+"po-parser@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "po-parser@npm:2.2.0"
+  checksum: 10/5b3ed3eda2dd6be26f321510613cbb563771a50ab29280369cace65f446a8df3e4ff1ec486c7d33b414ffc1c8710bc408435ebf63391b0d9b59362876e069d55
   languageName: node
   linkType: hard
 
@@ -17650,6 +17942,24 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10/adf06a7b6a27d3651c325ac9b66d2b82ccacaed7450b85b211d123e91d9a23cb5a587fcc6db5b4fd07ac7233e5abf024d30cf02ddc2ec46bca712151c0836151
+  languageName: node
+  linkType: hard
+
+"use-intl@npm:^4.14.9":
+  version: 4.14.9
+  resolution: "use-intl@npm:4.14.9"
+  dependencies:
+    "@formatjs/fast-memoize": "npm:^3.1.0"
+    "@schummar/icu-type-parser": "npm:1.21.5"
+    icu-minify: "npm:^4.14.9"
+    intl-messageformat: "npm:^11.1.0"
+  peerDependencies:
+    "@types/react": ^17.0.0 || ^18.0.0 || ^19.0.0
+    react: ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10/55d45c901e91e871d9a98e6e2180b62fb95b919629fc6ee14bf1ec114faf81c68596e032ae6abd2f7834d90f555d5ed392a2ad1e77a8b21b2259c0bb330eb39e
   languageName: node
   linkType: hard
 

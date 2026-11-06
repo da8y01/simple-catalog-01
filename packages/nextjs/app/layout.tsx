@@ -1,5 +1,7 @@
 import "@rainbow-me/rainbowkit/styles.css";
 import "@scaffold-ui/components/styles.css";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
@@ -10,12 +12,17 @@ export const metadata = getMetadata({
   description: "Built with 🏗 Scaffold-ETH 2",
 });
 
-const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
+const ScaffoldEthApp = async ({ children }: { children: React.ReactNode }) => {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html suppressHydrationWarning className={``}>
+    <html suppressHydrationWarning lang={locale}>
       <body>
         <ThemeProvider enableSystem>
-          <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          <NextIntlClientProvider messages={messages}>
+            <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
